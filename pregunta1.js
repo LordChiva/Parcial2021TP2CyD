@@ -4,11 +4,23 @@
  */
 
 const even = function(numbers){
-    
+    let pares = [];
+    for (let index = 0; index < numbers.length; index++) {
+        if (numbers[index] % 2 === 0) {
+            pares.push(numbers[index]);
+        }
+    }
+    return pares;
 }
 
 const odd = function(numbers){
-
+    let impares = [];
+    for (let index = 0; index < numbers.length; index++) {
+        if (numbers[index] % 2 != 0) {
+            impares.push(numbers[index]);
+        }
+    }
+    return impares;
 }
 
 // TESTS (no modificar)

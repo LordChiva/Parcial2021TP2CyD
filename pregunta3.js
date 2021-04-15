@@ -3,7 +3,44 @@
 // si la longitud del array es < 3 se debe retornar undefined
 
 const greater3 = nums => {
-    
+    let mayor1 = 0;
+    let mayor2 = 0;
+    let mayor3 = 0;
+    let valor = null;
+
+    return buscar1er();
+
+    function buscar1er() {
+        if (nums.length >= 3) {
+        
+            for (let index = 0; index < nums.length; index++) {
+                //console.log(nums[index]);
+            if (nums[index] > mayor1) {
+                mayor1 = nums[index];
+            }
+            if (nums[index] > mayor2 && mayor2 <= mayor1) {
+                mayor2 = nums[index];
+            }
+            if (nums[index] > mayor3 && mayor3 <= mayor1 && mayor3 <= mayor2) {
+                mayor3 = nums[index];
+                valor = mayor3;
+                }
+            /**console.log(mayor1);
+            
+            console.log(mayor2);
+            
+            console.log(mayor3);*/
+            }
+            
+        } else if(mayor1 == mayor2 == mayor3) {
+            valor = undefined;
+        } else {
+            valor = undefined;
+        }
+
+
+        return valor;
+    }
 }
 
 

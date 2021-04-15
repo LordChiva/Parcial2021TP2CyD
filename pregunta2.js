@@ -15,7 +15,55 @@
   }
 
 const sale = function (article, cant){
-  
+  let ventaExitosa = 200;
+  let ventaFallida = 500;
+  let resultado = null;
+  //let aux = 0;
+  //let inventario = null;
+
+
+  console.log(recorrer());
+
+  function recorrer() {
+    switch (article){
+      case 'shoes':
+        if (cant <= inventory.shoes) {
+          inventory.shoes = inventory.shoes - cant;
+          resultado = ventaExitosa;
+        } else {
+          resultado = ventaFallida;
+        }
+        break;
+      case 'socks':
+        if (cant <= inventory.socks) {
+          inventory.socks = inventory.socks - cant;
+          resultado = ventaExitosa;
+        } else {
+          resultado = ventaFallida;
+        }
+        break;
+      case 'shirts':
+        if (cant <= inventory.shirts) {
+          inventory.shirts = inventory.shirts - cant;
+          resultado = ventaExitosa;
+        } else {
+          resultado = ventaFallida;
+        }
+        break;
+      case 'pants':
+        if (cant <= inventory.pants) {
+          inventory.pants = inventory.pants - cant;
+          resultado = ventaExitosa;
+        } else {
+          resultado = ventaFallida;
+        }
+        break;
+    }
+    
+    return resultado;
+  }
+
+  return resultado;
 }
 
 // TESTS (no modificar)
