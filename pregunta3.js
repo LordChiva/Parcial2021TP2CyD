@@ -14,7 +14,6 @@ const greater3 = nums => {
         if (nums.length >= 3) {
         
             for (let index = 0; index < nums.length; index++) {
-                //console.log(nums[index]);
             if (nums[index] > mayor1) {
                 mayor1 = nums[index];
             }
@@ -24,12 +23,7 @@ const greater3 = nums => {
             if (nums[index] > mayor3 && mayor3 <= mayor1 && mayor3 <= mayor2) {
                 mayor3 = nums[index];
                 valor = mayor3;
-                }
-            /**console.log(mayor1);
-            
-            console.log(mayor2);
-            
-            console.log(mayor3);*/
+            }
             }
             
         } else if(mayor1 == mayor2 == mayor3) {
@@ -38,7 +32,7 @@ const greater3 = nums => {
             valor = undefined;
         }
 
-
+        //
         return valor;
     }
 }
